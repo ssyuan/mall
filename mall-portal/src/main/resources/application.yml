@@ -19,9 +19,9 @@ redis:
     expire:
       authCode: 90 # 验证码超期时间
 
-# 消息队列定义
-rabbitmq:
-  queue:
-    name:
-      cancelOrder: cancelOrderQueue
-
+## 消息队列定义
+#rabbitmq:
+#  queue:
+#    name:
+#      cancelOrder: cancelOrderQueue
+#

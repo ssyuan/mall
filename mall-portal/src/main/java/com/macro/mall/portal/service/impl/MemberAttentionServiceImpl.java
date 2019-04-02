@@ -14,27 +14,30 @@ import java.util.List;
  */
 @Service
 public class MemberAttentionServiceImpl implements MemberAttentionService {
-    @Autowired
-    private MemberBrandAttentionRepository memberBrandAttentionRepository;
+//    @Autowired
+//    private MemberBrandAttentionRepository memberBrandAttentionRepository;
 
     @Override
     public int add(MemberBrandAttention memberBrandAttention) {
         int count = 0;
-        MemberBrandAttention findAttention = memberBrandAttentionRepository.findByMemberIdAndBrandId(memberBrandAttention.getMemberId(), memberBrandAttention.getBrandId());
-        if (findAttention == null) {
-            memberBrandAttentionRepository.save(memberBrandAttention);
-            count = 1;
-        }
+//        MemberBrandAttention findAttention = memberBrandAttentionRepository.findByMemberIdAndBrandId(memberBrandAttention.getMemberId(), memberBrandAttention.getBrandId());
+//        if (findAttention == null) {
+//            memberBrandAttentionRepository.save(memberBrandAttention);
+//            count = 1;
+//        }
         return count;
     }
 
     @Override
     public int delete(Long memberId, Long brandId) {
-        return memberBrandAttentionRepository.deleteByMemberIdAndBrandId(memberId,brandId);
+//        return memberBrandAttentionRepository.deleteByMemberIdAndBrandId(memberId,brandId);
+        return 0;
     }
 
     @Override
     public List<MemberBrandAttention> list(Long memberId) {
-        return memberBrandAttentionRepository.findByMemberId(memberId);
+//        return memberBrandAttentionRepository.findByMemberId(memberId);
+        return null;
+
     }
 }

@@ -17,13 +17,13 @@ import org.springframework.web.bind.annotation.ResponseBody;
  * Created by macro on 2018/10/17.
  */
 @Controller
-@Api(tags = "OmsPortalOrderReturnApplyController", description = "申请退货管理")
+//@Api(tags = "OmsPortalOrderReturnApplyController", description = "申请退货管理")
 @RequestMapping("/returnApply")
 public class OmsPortalOrderReturnApplyController {
     @Autowired
     private OmsPortalOrderReturnApplyService returnApplyService;
 
-    @ApiOperation("申请退货")
+//    @ApiOperation("申请退货")
     @RequestMapping(value = "/create", method = RequestMethod.POST)
     @ResponseBody
     public Object create(@RequestBody OmsOrderReturnApplyParam returnApply) {

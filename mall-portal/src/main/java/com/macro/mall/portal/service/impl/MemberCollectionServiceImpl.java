@@ -14,27 +14,29 @@ import java.util.List;
  */
 @Service
 public class MemberCollectionServiceImpl implements MemberCollectionService {
-    @Autowired
-    private MemberProductCollectionRepository productCollectionRepository;
+//    @Autowired
+//    private MemberProductCollectionRepository productCollectionRepository;
 
     @Override
     public int addProduct(MemberProductCollection productCollection) {
         int count = 0;
-        MemberProductCollection findCollection = productCollectionRepository.findByMemberIdAndProductId(productCollection.getMemberId(), productCollection.getProductId());
-        if (findCollection == null) {
-            productCollectionRepository.save(productCollection);
-            count = 1;
-        }
+//        MemberProductCollection findCollection = productCollectionRepository.findByMemberIdAndProductId(productCollection.getMemberId(), productCollection.getProductId());
+//        if (findCollection == null) {
+//            productCollectionRepository.save(productCollection);
+//            count = 1;
+//        }
         return count;
     }
 
     @Override
     public int deleteProduct(Long memberId, Long productId) {
-        return productCollectionRepository.deleteByMemberIdAndProductId(memberId, productId);
+//        return productCollectionRepository.deleteByMemberIdAndProductId(memberId, productId);
+        return 0;
     }
 
     @Override
     public List<MemberProductCollection> listProduct(Long memberId) {
-        return productCollectionRepository.findByMemberId(memberId);
+//        return productCollectionRepository.findByMemberId(memberId);
+        return null;
     }
 }
