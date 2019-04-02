@@ -6,6 +6,7 @@ import springfox.documentation.builders.ApiInfoBuilder;
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
 import springfox.documentation.service.ApiInfo;
+import springfox.documentation.service.Contact;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
@@ -31,7 +32,7 @@ public class Swagger2Config {
         return new ApiInfoBuilder()
                 .title("mall搜索系统")
                 .description("mall搜索模块")
-                .contact("macro")
+                .contact(new Contact("逆旅行人", "http://lf.com", "ssyuan@gmail.com"))
                 .version("1.0")
                 .build();
     }

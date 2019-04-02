@@ -1,5 +1,6 @@
 package com.macro.mall.config;
 
+import com.google.common.base.Predicates;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import springfox.documentation.builders.ApiInfoBuilder;
@@ -23,7 +24,13 @@ public class Swagger2Config {
                 .apiInfo(apiInfo())
                 .select()
                 .apis(RequestHandlerSelectors.basePackage("com.macro.mall.controller"))
-                .paths(PathSelectors.any())
+                .paths(Predicates.or(PathSelectors.ant("/returnApply/*"),
+                        PathSelectors.ant("/order/*"),
+                        PathSelectors.ant("/returnReason/*"),
+                        PathSelectors.ant("/orderSetting/*"),
+                        PathSelectors.ant("/product/*"),
+                        PathSelectors.ant("/productCategory/*")
+                ))
                 .build();
     }
 

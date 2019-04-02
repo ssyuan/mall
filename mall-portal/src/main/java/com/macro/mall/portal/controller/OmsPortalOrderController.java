@@ -41,7 +41,7 @@ public class OmsPortalOrderController {
         return portalOrderService.paySuccess(orderId);
     }
 
-    @ApiOperation("自动取消超时订单")
+//    @ApiOperation("自动取消超时订单")
     @RequestMapping(value = "/cancelTimeOutOrder",method = RequestMethod.POST)
     @ResponseBody
     public Object cancelTimeOutOrder(){

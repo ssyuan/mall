@@ -19,7 +19,7 @@ import java.util.List;
  * Created by macro on 2018/10/18.
  */
 @Controller
-@Api(tags = "OmsOrderReturnApplyController", description = "订单退货申请管理")
+@Api(tags = "OrderReturnApplyController", description = "订单退货申请管理")
 @RequestMapping("/returnApply")
 public class OmsOrderReturnApplyController {
     @Autowired

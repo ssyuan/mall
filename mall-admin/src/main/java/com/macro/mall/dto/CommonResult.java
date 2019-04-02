@@ -2,6 +2,7 @@ package com.macro.mall.dto;
 
 import com.github.pagehelper.PageInfo;
 import com.macro.mall.util.JsonUtil;
+import lombok.Data;
 import org.springframework.validation.BindingResult;
 
 import java.util.HashMap;
@@ -12,6 +13,7 @@ import java.util.Map;
  * 通用返回对象
  * Created by macro on 2018/4/26.
  */
+@Data
 public class CommonResult {
     //操作成功
     public static final int SUCCESS = 200;
@@ -112,29 +114,5 @@ public class CommonResult {
     @Override
     public String toString() {
         return JsonUtil.objectToJson(this);
-    }
-
-    public int getCode() {
-        return code;
-    }
-
-    public void setCode(int code) {
-        this.code = code;
-    }
-
-    public String getMessage() {
-        return message;
-    }
-
-    public void setMessage(String message) {
-        this.message = message;
-    }
-
-    public Object getData() {
-        return data;
-    }
-
-    public void setData(Object data) {
-        this.data = data;
     }
 }
